@@ -343,6 +343,8 @@ return [
                         'quotes' => 'Báo giá',
                         'persons' => 'Người',
                         'products' => 'Sản phẩm',
+                        'settings' => 'Cài đặt',
+                        'configurations' => 'Cấu hình'
                     ],
                     'explore-all-products'          => 'Khám phá tất cả Sản phẩm',
                     'explore-all-leads'             => 'Khám phá tất cả Khách hàng tiềm năng',

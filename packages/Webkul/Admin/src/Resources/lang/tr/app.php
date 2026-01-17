@@ -343,6 +343,8 @@ return [
                         'quotes' => 'Teklifler',
                         'persons' => 'Kişiler',
                         'products' => 'Ürünler',
+                        'settings' => 'Ayarlar',
+                        'configurations' => 'Yaplandırmalar',
                     ],
                     'explore-all-products'          => 'Tüm Ürünleri Keşfet',
                     'explore-all-leads'             => 'Tüm Müşterileri Keşfet',

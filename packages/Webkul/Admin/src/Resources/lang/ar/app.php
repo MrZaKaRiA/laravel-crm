@@ -343,6 +343,8 @@ return [
                         'quotes' => 'عروض الأسعار',
                         'persons' => 'الأشخاص',
                         'products' => 'المنتجات',
+                        'settings'       => 'الإعدادات',
+                        'configurations'  => 'التهيئة',
                     ],
                     'explore-all-products'          => 'استكشاف جميع المنتجات',
                     'explore-all-leads'             => 'استكشاف جميع العملاء المحتملين',

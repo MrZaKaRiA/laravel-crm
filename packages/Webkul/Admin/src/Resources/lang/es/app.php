@@ -343,6 +343,8 @@ return [
                         'quotes' => 'Cotizaciones',
                         'persons' => 'Personas',
                         'products' => 'Productos',
+                        'settings' => 'Ajustes',
+                        'configurations' => 'Configuraciones',
                     ],
                     'explore-all-products'          => 'Explorar todos los Productos',
                     'explore-all-leads'             => 'Explorar todas las Oportunidades',

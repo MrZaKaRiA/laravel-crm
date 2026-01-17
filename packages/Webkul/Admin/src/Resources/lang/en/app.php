@@ -343,6 +343,8 @@ return [
                         'quotes' => 'Quotes',
                         'persons' => 'Persons',
                         'products' => 'Products',
+                        'settings' => 'Settings',
+                        'configurations' => 'Configurations',
                     ],
 
                     'explore-all-products'          => 'Explore all Products',

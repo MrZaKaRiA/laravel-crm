@@ -343,6 +343,8 @@ return [
                         'quotes' => 'پیشنهادات',
                         'persons' => 'افراد',
                         'products' => 'محصولات',
+                        'settings' => 'تنظیمات',
+                        'configurations' => 'پیکربندی‌ها',
                     ],
                     'explore-all-products'          => 'کاوش در تمامی محصولات',
                     'explore-all-leads'             => 'کاوش در تمامی سرنخ‌ها',
