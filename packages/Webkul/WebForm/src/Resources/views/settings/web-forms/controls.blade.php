@@ -40,7 +40,6 @@
                     :label="$attribute->name ?? $parentAttribute->name"
                     :placeholder="$attribute->placeholder"
                 />
-
                 <x-web_form::form.control-group.error :control-name="$fieldName" />
 
                 @break
