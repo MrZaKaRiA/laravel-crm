@@ -2,23 +2,11 @@
 
 namespace Webkul\Activity\Repositories;
 
-use Illuminate\Container\Container;
+use Webkul\Activity\Contracts\Activity;
 use Webkul\Core\Eloquent\Repository;
 
 class ActivityRepository extends Repository
 {
-    /**
-     * Create a new repository instance.
-     *
-     * @return void
-     */
-    public function __construct(
-        protected FileRepository $fileRepository,
-        Container $container
-    ) {
-        parent::__construct($container);
-    }
-
     /**
      * Specify Model class name
      *
@@ -32,16 +20,16 @@ class ActivityRepository extends Repository
     /**
      * Create pipeline.
      *
-     * @return \Webkul\Activity\Contracts\Activity
+     * @return Activity
      */
     public function create(array $data)
     {
         $activity = parent::create($data);
 
         if (isset($data['file'])) {
-            $this->fileRepository->create([
-                'name'        => $data['name'] ?? $data['file']->getClientOriginalName(),
-                'path'        => $data['file']->store('activities/'.$activity->id),
+            app(FileRepository::class)->create([
+                'name' => $data['name'] ?? $data['file']->getClientOriginalName(),
+                'path' => $data['file']->store('activities/'.$activity->id),
                 'activity_id' => $activity->id,
             ]);
         }
@@ -70,7 +58,7 @@ class ActivityRepository extends Repository
      *
      * @param  int  $id
      * @param  string  $attribute
-     * @return \Webkul\Activity\Contracts\Activity
+     * @return Activity
      */
     public function update(array $data, $id, $attribute = 'id')
     {
@@ -119,6 +107,8 @@ class ActivityRepository extends Repository
      */
     public function getActivities($dateRange)
     {
+        $tablePrefix = \DB::getTablePrefix();
+
         return $this->select(
             'activities.id',
             'activities.created_at',
@@ -127,7 +117,7 @@ class ActivityRepository extends Repository
             'activities.schedule_to as end',
             'users.name as user_name',
         )
-            ->addSelect(\DB::raw('IF(activities.is_done, "done", "") as class'))
+            ->addSelect(\DB::raw('IF('.$tablePrefix.'activities.is_done, "done", "") as class'))
             ->leftJoin('activity_participants', 'activities.id', '=', 'activity_participants.activity_id')
             ->leftJoin('users', 'activities.user_id', '=', 'users.id')
             ->whereIn('type', ['call', 'meeting', 'lunch'])

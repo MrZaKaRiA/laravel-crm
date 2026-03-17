@@ -24,7 +24,7 @@
 
         <div class="flex items-center gap-x-2.5">
             <!-- Upload File for Lead Creation -->
-            @if(core()->getConfigData('general.magic_ai.pdf_generation.enabled'))
+            @if(core()->getConfigData('general.magic_ai.doc_generation.enabled'))
                 @include('admin::leads.index.upload')
             @endif
 
@@ -37,7 +37,7 @@
             <div class="flex items-center gap-x-2.5">
                 @if (bouncer()->hasPermission('leads.create'))
                     <a
-                        href="{{ route('admin.leads.create') }}"
+                        href="{{ route('admin.leads.create', request()->query()) }}"
                         class="primary-button"
                     >
                         @lang('admin::app.leads.index.create-btn')

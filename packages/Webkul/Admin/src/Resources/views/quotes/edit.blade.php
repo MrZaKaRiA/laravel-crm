@@ -6,7 +6,10 @@
     {!! view_render_event('admin.contacts.quotes.edit.form_controls.before', ['quote' => $quote]) !!}
 
     <x-admin::form
-        :action="route('admin.quotes.update', $quote->id)"
+        :action="route('admin.quotes.update', $quote->id) . '?' . http_build_query(array_merge(
+            request()->route()->parameters(),
+            request()->all()
+        ))"
         method="PUT"
     >
         <div class="flex flex-col gap-4">
@@ -159,7 +162,7 @@
                                 <x-admin::attributes.edit.lookup />
 
                                 @php
-                                    $leadId = old('lead-id') ?? optional($quote->leads->first())->id;
+                                    $leadId = old('lead_id') ?? optional($quote->leads->first())->id;
 
                                     $lookUpEntityData = app('Webkul\Attribute\Repositories\AttributeRepository')->getLookUpEntity('leads', $leadId);
                                 @endphp
@@ -182,7 +185,7 @@
                             <!-- Custom Attributes -->
                             <x-admin::attributes
                                 :custom-attributes="app('Webkul\Attribute\Repositories\AttributeRepository')->findWhere([
-                                    'entity_type'     => 'quotes',
+                                    'entity_type' => 'quotes',
                                     'is_user_defined' => 1,
                                 ])->sortBy('sort_order')"
                                 :custom-validations="[
@@ -270,7 +273,7 @@
             id="v-quote-item-list-template"
         >
             <div class="flex flex-col gap-4">
-                <div class="block w-full overflow-x-auto">
+                <div class="block w-full">
                     <!-- Table -->
                     <x-admin::table>
                         <!-- Table Head -->
@@ -329,6 +332,7 @@
                             </template>
                         </x-admin::table.tbody>
                     </x-admin::table>
+                    <x-admin::form.control-group.error name="items"/>
                 </div>
 
                 <!-- Add New Quote Item -->
@@ -425,7 +429,12 @@
                             ::value="{ id: product.product_id, name: product.name }"
                             @on-selected="(product) => addProduct(product)"
                             :placeholder="trans('admin::app.quotes.edit.search-products')"
+                            rules="required"
+                            :label="trans('admin::app.quotes.edit.product-name')"
+                            ::class="errors[`${inputName}[product_id]`] ? 'border !border-red-600 hover:border-red-600' : ''"
                         />
+                        <x-admin::form.control-group.error name="`items.${product.id}.product_id`"/>
+                        <x-admin::form.control-group.error ::name="`${inputName}[product_id]`"/>
                     </x-admin::form.control-group>
                 </x-admin::table.td>
 
@@ -443,6 +452,7 @@
                             @on-change="(event) => product.quantity = event.value"
                             position="center"
                         />
+                        <x-admin::form.control-group.error ::name="`items.${product.id}.quantity`"/>
                     </x-admin::form.control-group>
                 </x-admin::table.td>
 
@@ -452,7 +462,7 @@
                         <x-admin::form.control-group.control
                             type="inline"
                             ::name="`${inputName}[price]`"
-                            ::value="product.price"
+                            ::value="(product.price) ?? 0"
                             rules="required|decimal:4"
                             ::errors="errors"
                             :label="trans('admin::app.quotes.create.price')"
@@ -461,6 +471,8 @@
                             position="center"
                             ::value-label="$admin.formatPrice(product.price)"
                         />
+                        <x-admin::form.control-group.error name="`items.${product.id}.price`"/>
+                        <x-admin::form.control-group.error ::name="`${inputName}[price]`"/>
                     </x-admin::form.control-group>
                 </x-admin::table.td>
 
@@ -470,7 +482,7 @@
                         <x-admin::form.control-group.control
                             type="inline"
                             ::name="`${inputName}[total]`"
-                            ::value="product.price * product.quantity"
+                            ::value="(product.price * product.quantity) ?? 0"
                             rules="required|decimal:4"
                             ::errors="errors"
                             :label="trans('admin::app.quotes.create.total')"
@@ -479,6 +491,8 @@
                             position="center"
                             ::value-label="$admin.formatPrice(product.price * product.quantity)"
                         />
+                        <x-admin::form.control-group.error name="`items.${product.id}.total`"/>
+                        <x-admin::form.control-group.error ::name="`${inputName}[total]`"/>
                     </x-admin::form.control-group>
                 </x-admin::table.td>
 
@@ -497,6 +511,8 @@
                             position="center"
                             ::value-label="$admin.formatPrice(product.discount_amount)"
                         />
+                        <x-admin::form.control-group.error name="`items.${product.id}.discount_amount`"/>
+                        <x-admin::form.control-group.error ::name="`${inputName}[discount_amount]`"/>
                     </x-admin::form.control-group>
                 </x-admin::table.td>
 
@@ -768,7 +784,7 @@
                     addProduct(result) {
                         this.product.product_id = result.id;
                         this.product.name = result.name;
-                        this.product.price = result.price;
+                        this.product.price = result.price ?? 0;
                         this.product.quantity = result.quantity ?? 1;
                         this.product.discount_amount = 0;
                         this.product.tax_amount = 0;

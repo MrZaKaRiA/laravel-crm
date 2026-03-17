@@ -3,8 +3,8 @@
 
     if (isset($lead)) {
         $quote->fill([
-            'person_id'       => $lead->person_id,
-            'user_id'         => $lead->user_id,
+            'person_id' => $lead->person_id,
+            'user_id' => $lead->user_id,
             'billing_address' => $lead->person->organization ? $lead->person->organization->address : null
         ]);
     }
@@ -17,7 +17,12 @@
 
     {!! view_render_event('admin.contacts.quotes.create.form_controls.before') !!}
 
-    <x-admin::form :action="route('admin.quotes.store')">
+    <x-admin::form
+        :action="route('admin.quotes.store').'?'.http_build_query(array_merge(
+            request()->route()->parameters(),
+            request()->all()
+        ))"
+    >
         <div class="flex flex-col gap-4">
             <div class="flex items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300">
                 <div class="flex flex-col gap-2">
@@ -170,7 +175,7 @@
                                 <x-admin::attributes.edit.lookup />
 
                                 @php
-                                    $lookUpEntityData = app('Webkul\Attribute\Repositories\AttributeRepository')->getLookUpEntity('leads', request('id'));
+                                    $lookUpEntityData = app('Webkul\Attribute\Repositories\AttributeRepository')->getLookUpEntity('leads', request('lead_id'));
                                 @endphp
 
                                 <x-admin::form.control-group class="w-full">
@@ -189,7 +194,7 @@
                             <!-- Custom Attributes -->
                             <x-admin::attributes
                                 :custom-attributes="app('Webkul\Attribute\Repositories\AttributeRepository')->findWhere([
-                                    'entity_type'     => 'quotes',
+                                    'entity_type' => 'quotes',
                                     'is_user_defined' => 1,
                                 ])->sortBy('sort_order')"
                                 :custom-validations="[
@@ -279,7 +284,7 @@
             id="v-quote-item-list-template"
         >
             <div class="flex flex-col gap-4">
-                <div class="block w-full overflow-x-auto">
+                <div class="block w-full">
                     {!! view_render_event('admin.contacts.quotes.create.table.after') !!}
 
                     <!-- Table -->
@@ -434,26 +439,35 @@
                         <x-admin::lookup
                             ::src="src"
                             ::name="`${inputName}[product_id]`"
+                            :preload="true"
                             :placeholder="trans('admin::app.quotes.create.search-products')"
                             @on-selected="(product) => addProduct(product)"
+                            rules="required"
+                            :label="trans('admin::app.quotes.create.product-name')"
+                            ::class="errors[`${inputName}[product_id]`] ? 'border !border-red-600 hover:border-red-600' : ''"
                         />
+
+                        <x-admin::form.control-group.error name="items.item_0.product_id"/>
+                        <x-admin::form.control-group.error name="items[item_0][product_id]"/>
                     </x-admin::form.control-group>
                 </x-admin::table.td>
 
                 <!-- Quantity -->
                 <x-admin::table.td class="!px-2 ltr:text-right rtl:text-left">
                     <x-admin::form.control-group class="!mb-0">
+
                         <x-admin::form.control-group.control
                             type="inline"
                             ::name="`${inputName}[quantity]`"
                             ::value="product.quantity"
-                            rules="required|decimal:4"
+                            rules="required|numeric|min:1"
                             ::errors="errors"
                             :label="trans('admin::app.quotes.create.quantity')"
                             :placeholder="trans('admin::app.quotes.create.quantity')"
                             @on-change="(event) => product.quantity = event.value"
                             position="center"
                         />
+                        <x-admin::form.control-group.error name="items.item_0.quantity"/>
                     </x-admin::form.control-group>
                 </x-admin::table.td>
 
@@ -472,6 +486,7 @@
                             position="center"
                             ::value-label="$admin.formatPrice(product.price)"
                         />
+                        <x-admin::form.control-group.error name="items.item_0.price"/>
                     </x-admin::form.control-group>
                 </x-admin::table.td>
 
@@ -490,6 +505,7 @@
                             position="center"
                             ::value-label="$admin.formatPrice(product.price * product.quantity)"
                         />
+                        <x-admin::form.control-group.error name="items.item_0.total"/>
                     </x-admin::form.control-group>
                 </x-admin::table.td>
 
@@ -508,6 +524,7 @@
                             position="center"
                             ::value-label="$admin.formatPrice(product.discount_amount)"
                         />
+                        <x-admin::form.control-group.error name="items.item_0.discount_amount"/>
                     </x-admin::form.control-group>
                 </x-admin::table.td>
 
@@ -526,6 +543,7 @@
                             position="center"
                             ::value-label="$admin.formatPrice(product.tax_amount)"
                         />
+                        <x-admin::form.control-group.error name="items.item_0.tax_amount"/>
                     </x-admin::form.control-group>
                 </x-admin::table.td>
 
@@ -541,6 +559,7 @@
                             position="center"
                             ::value-label="$admin.formatPrice(parseFloat(product.price * product.quantity) + parseFloat(product.tax_amount) - parseFloat(product.discount_amount))"
                         />
+                        <x-admin::form.control-group.error name="items.item_0.final_total"/>
                     </x-admin::form.control-group>
                 </x-admin::table.td>
 
@@ -769,9 +788,9 @@
                      * @return {void}
                      */
                     addProduct(result) {
-                        this.product.product_id = result.id;
-                        this.product.name = result.name;
-                        this.product.price = result.price;
+                        this.product.product_id = result.id ?? null;
+                        this.product.name = result.name ?? '';
+                        this.product.price = result.price ?? 0;
                         this.product.quantity = result.quantity ?? 1;
                         this.product.discount_amount = 0;
                         this.product.tax_amount = 0;
