@@ -255,7 +255,29 @@
                         .catch (error => {});
                 },
 
-                handleResult(result) {
+                async handleResult(result) {
+                    if (
+                        this.canAddNew
+                        && result.id === ''
+                        && this.attribute.lookup_type === 'users'
+                    ) {
+                        try {
+                            const response = await this.$axios.post(
+                                '{{ route("admin.settings.users.quick_store") }}',
+                                {
+                                    name: result.name,
+                                }
+                            );
+
+                            result = {
+                                id: response.data.id,
+                                name: response.data.name,
+                            };
+                        } catch (error) {
+                            return;
+                        }
+                    }
+
                     this.showPopup = false;
 
                     this.selectedItem = result;
