@@ -44,7 +44,7 @@ return [
                 'name' => 'favicon_image',
                 'title' => 'admin::app.configuration.index.general.general.admin-logo.favicon-image',
                 'type' => 'image',
-                'validation' => 'mimes:ico',
+                'validation' => 'mimes:ico,jpeg,jpg,png,webp,svg',
             ],
         ],
     ], [
