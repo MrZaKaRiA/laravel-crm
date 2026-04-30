@@ -94,14 +94,6 @@
                             width="24"
                             height="24"
                         />
-
-                        <img
-                            src="{{ request()->cookie('dark_mode') ? vite()->asset('images/mobile-dark-logo.svg') : vite()->asset('images/mobile-light-logo.svg') }}"
-                            id="logo-image"
-                            alt="{{ config('app.name') }}"
-                            width="24"
-                            height="24"
-                        />
                     @endif
 
                     <!-- Version -->
