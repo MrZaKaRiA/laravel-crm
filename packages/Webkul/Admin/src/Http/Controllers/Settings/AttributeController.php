@@ -98,6 +98,10 @@ class AttributeController extends Controller
 
         Event::dispatch('settings.attribute.update.before', $id);
 
+        $quickAdd = request()->has('quick_add') ? 1 : 0;
+
+        request()->merge(['quick_add' => $quickAdd]);
+
         $attribute = $this->attributeRepository->update(request()->all(), $id);
 
         Event::dispatch('settings.attribute.update.after', $attribute);
