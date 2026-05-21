@@ -1824,6 +1824,15 @@ return [
                         'to' => 'Kime',
                     ],
                 ],
+                'stages' => [
+                    'won' => 'Kazandı',
+                    'lost' => 'Kayıp',
+                    'need-more-info' => 'Daha Fazla Bilgi Gerekiyor',
+                    'closed-at' => 'Kapanış Tarihi',
+                    'won-value' => 'Kazanan Değer',
+                    'lost-reason' => 'Kayıp Nedeni',
+                    'save-btn' => 'Kaydet',
+                ],
             ],
             'view-switcher' => [
                 'all-pipelines' => 'Tüm Boru Hatları',
