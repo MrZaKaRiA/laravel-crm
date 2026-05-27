@@ -162,8 +162,6 @@ Route::prefix('settings')->group(function () {
 
         Route::post('create', 'store')->name('admin.settings.users.store');
 
-        Route::post('quick-create', 'quickStore')->name('admin.settings.users.quick_store');
-
         Route::get('edit/{id?}', 'edit')->name('admin.settings.users.edit');
 
         Route::put('edit/{id}', 'update')->name('admin.settings.users.update');

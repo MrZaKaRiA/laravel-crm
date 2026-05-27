@@ -225,37 +225,6 @@ class UserController extends Controller
     }
 
     /**
-     * Quick add a new user.
-     */
-    public function quickStore(): JsonResponse
-    {
-        $this->validate(request(), [
-            'name' => 'required',
-        ]);
-
-        $data = request()->all();
-
-        $data['status'] = $data['status'] ?? 1;
-
-        $data['view_permission'] = $data['view_permission'] ?? 'global';
-
-        if (! isset($data['role_id'])) {
-            $role = $this->roleRepository->first();
-
-            $data['role_id'] = $role?->id;
-        }
-
-        $user = $this->userRepository->create($data);
-
-        Event::dispatch('settings.user.create.after', $user);
-
-        return response()->json([
-            'id' => $user->id,
-            'name' => $user->name,
-        ]);
-    }
-
-    /**
      * Mass Delete the specified resources.
      */
     public function massDestroy(MassDestroyRequest $massDestroyRequest): JsonResponse
