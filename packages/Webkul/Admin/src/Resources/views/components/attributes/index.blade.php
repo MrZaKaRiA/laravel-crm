@@ -1,3 +1,9 @@
+@props([
+    'customAttributes' => [],
+    'entity'           => null,
+    'canAddNew'        => true,
+])
+
 @foreach ($customAttributes as $attribute)
     @php
         $validations = [];
@@ -32,6 +38,7 @@
                 :attribute="$attribute"
                 :validations="$validations"
                 :value="isset($entity) ? $entity[$attribute->code] : null"
+                :can-add-new="$canAddNew"
             />
         @endif
 
