@@ -1148,7 +1148,7 @@ return [
                     'status' => 'وضعیت',
                     'title' => 'ایجاد کاربر',
                     'view-permission' => 'مجوز مشاهده',
-                    'select-at-lest-one-group' => 'Select at least one group',
+                    'select-at-lest-one-group' => 'حداقل یک گروه را انتخاب کنید',
                 ],
                 'edit' => [
                     'title' => 'ویرایش کاربر',
@@ -1466,7 +1466,7 @@ return [
                 'multiselect' => 'چند انتخابی',
                 'name' => 'نام',
                 'numeric' => 'عددی',
-                'option-deleted' => 'Attribute Option is deleted successfully',
+                'option-deleted' => 'گزینه ویژگی با موفقیت حذف شد',
                 'option-name' => 'نام گزینه',
                 'option-type' => 'نوع گزینه',
                 'options' => 'گزینه‌ها',
@@ -1979,7 +1979,7 @@ return [
                         'trash' => 'زباله‌دان',
                     ],
                     'menu-color' => [
-                        'brand-color' => 'Brand Color',
+                        'brand-color' => 'رنگ برند',
                         'info' => 'ما می‌توانیم رنگ آیتم‌های منو را اینجا تغییر دهیم.',
                         'title' => 'پیکربندی رنگ آیتم‌های منو',
                     ],
@@ -2032,8 +2032,8 @@ return [
     'dashboard' => [
         'index' => [
             'title' => 'داشبورد',
-            'start-date' => 'Start Date',
-            'end-date' => 'End Date',
+            'start-date' => 'تاریخ شروع',
+            'end-date' => 'تاریخ پایان',
             'revenue' => [
                 'lost-revenue' => 'درآمد از دست رفته',
                 'won-revenue' => 'درآمد برنده',

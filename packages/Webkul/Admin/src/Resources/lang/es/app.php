@@ -1981,7 +1981,7 @@ return [
                         'trash' => 'Papelera',
                     ],
                     'menu-color' => [
-                        'brand-color' => 'Brand Color',
+                        'brand-color' => 'Color de Marca',
                         'info' => 'Podemos cambiar los colores de los elementos del menú aquí.',
                         'title' => 'Configuraciones de Color de Elementos del Menú',
                     ],

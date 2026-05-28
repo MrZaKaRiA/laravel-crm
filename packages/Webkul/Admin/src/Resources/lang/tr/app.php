@@ -1149,7 +1149,7 @@ return [
                     'status' => 'Durum',
                     'title' => 'Kullanıcı Oluştur',
                     'view-permission' => 'Görüntüleme İzni',
-                    'select-at-lest-one-group' => 'Select at least one group',
+                    'select-at-lest-one-group' => 'En az bir grup seçin',
                 ],
                 'edit' => [
                     'title' => 'Kullanıcıyı Düzenle',
@@ -1467,7 +1467,7 @@ return [
                 'multiselect' => 'Çoklu Seçim',
                 'name' => 'Ad',
                 'numeric' => 'Sayısal',
-                'option-deleted' => 'Attribute Option is deleted successfully',
+                'option-deleted' => 'Öznitelik Seçeneği başarıyla silindi',
                 'option-name' => 'Seçenek Adı',
                 'option-type' => 'Seçenek Türü',
                 'options' => 'Seçenekler',
@@ -1982,7 +1982,7 @@ return [
                         'trash' => 'Çöp Kutusu',
                     ],
                     'menu-color' => [
-                        'brand-color' => 'Brand Color',
+                        'brand-color' => 'Marka Rengi',
                         'info' => 'Menü öğelerinin renklerini burada değiştirebiliriz.',
                         'title' => 'Menü Öğesi Renk Yapılandırmaları',
                     ],
@@ -2035,8 +2035,8 @@ return [
     'dashboard' => [
         'index' => [
             'title' => 'Gösterge Paneli',
-            'start-date' => 'Start Date',
-            'end-date' => 'End Date',
+            'start-date' => 'Başlangıç Tarihi',
+            'end-date' => 'Bitiş Tarihi',
             'revenue' => [
                 'lost-revenue' => 'Kayıp Gelir',
                 'won-revenue' => 'Kazançlı Gelir',
