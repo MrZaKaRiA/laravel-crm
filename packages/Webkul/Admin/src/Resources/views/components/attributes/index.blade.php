@@ -14,13 +14,7 @@
 
         $validations = implode('|', array_filter($validations));
 
-        $aliases = [
-            'lead_source_id' => 'source', 'lead_type_id' => 'type',
-            'lead_pipeline_id' => 'pipeline', 'lead_pipeline_stage_id' => 'stage',
-            'user_id' => 'sales-owner', 'organization_id' => 'organization',
-            'person_id' => 'person',
-        ];
-        $key = 'installer::app.seeders.attributes.'.$attribute->entity_type.'.'.($aliases[$attribute->code] ?? str_replace('_', '-', $attribute->code));
+        $key = 'installer::app.seeders.attributes.'.$attribute->entity_type.'.'.str_replace('_', '-', $attribute->code);
         $label = trans($key);
         if ($label === $key) {
             $label = $attribute->name;
