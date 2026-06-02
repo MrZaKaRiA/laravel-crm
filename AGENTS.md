@@ -10,8 +10,8 @@ Kilo Code, etc.).
 
 - **Product:** Krayin CRM (Webkul) — an open-source Laravel CRM.
 - **Stack:** Laravel `^12.0`, PHP `^8.3`, Pest `^3.0`, Laravel Pint `^1.18`.
-- **Not Bagisto, not a PIM** — Krayin is a CRM. Do NOT apply Bagisto or UnoPim
-  patterns; use Krayin's own conventions.
+- **Follow Krayin's own conventions** — use the patterns already present in this
+  repository's modules; do not import patterns from other Laravel products.
 - **Module location:** `packages/Webkul/{ModuleName}/src/`
 - **Core modules (reference implementations):** `Lead`, `Contact`, `Activity`,
   `Quote`, `Product`, `User`, `Attribute`, `Core`, `Admin`, `DataGrid`.
