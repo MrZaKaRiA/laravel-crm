@@ -1154,7 +1154,7 @@ return [
                     'status' => 'Durum',
                     'title' => 'Kullanıcı Oluştur',
                     'view-permission' => 'Görüntüleme İzni',
-                    'select-at-lest-one-group' => 'Select at least one group',
+                    'select-at-lest-one-group' => 'En az bir grup seçin',
                 ],
                 'edit' => [
                     'title' => 'Kullanıcıyı Düzenle',
@@ -2065,8 +2065,8 @@ return [
     'dashboard' => [
         'index' => [
             'title' => 'Gösterge Paneli',
-            'start-date' => 'Start Date',
-            'end-date' => 'End Date',
+            'start-date' => 'Başlangıç Tarihi',
+            'end-date' => 'Bitiş Tarihi',
             'revenue' => [
                 'lost-revenue' => 'Kayıp Gelir',
                 'won-revenue' => 'Kazançlı Gelir',
