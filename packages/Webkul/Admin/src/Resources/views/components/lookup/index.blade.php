@@ -181,8 +181,6 @@
 
                     isSearching: false,
 
-                    // placeholder: null,
-
                     cancelToken: null,
                 };
             },
@@ -191,9 +189,6 @@
                 if (this.value) {
                     this.selectedItem = this.value;
                 }
-
-                    // this.placeholder = this.placeholder;
-                
 
                 console.log(this.placeholder);
             },
