@@ -1870,6 +1870,7 @@ return [
         'common' => [
             'contact' => [
                 'name' => 'Tên',
+                'name-search-placeholder' => 'Tìm kiếm theo tên, email và số điện thoại',
                 'email' => 'Email',
                 'contact-number' => 'Số Liên Lạc',
                 'organization' => 'Tổ Chức',

@@ -1870,6 +1870,7 @@ return [
         'common' => [
             'contact' => [
                 'name' => 'الاسم',
+                'name-search-placeholder' => 'البحث بالاسم أو البريد الإلكتروني أو الرقم',
                 'email' => 'البريد الإلكتروني',
                 'contact-number' => 'رقم الاتصال',
                 'organization' => 'المنظمة',

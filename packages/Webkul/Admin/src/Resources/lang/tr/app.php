@@ -1870,6 +1870,7 @@ return [
         'common' => [
             'contact' => [
                 'name' => 'Ad',
+                'name-search-placeholder' => 'Ad, e-posta ve numaraya göre ara',
                 'email' => 'E-posta',
                 'contact-number' => 'İletişim Numarası',
                 'organization' => 'Kuruluş',

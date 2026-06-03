@@ -1872,6 +1872,7 @@ return [
             'contact' => [
                 'name' => 'Name',
                 'email' => 'Email',
+                'name-search-placeholder' => 'Search by name, email and number',
                 'contact-number' => 'Contact Number',
                 'organization' => 'Organization',
             ],

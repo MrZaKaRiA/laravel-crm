@@ -1870,6 +1870,7 @@ return [
         'common' => [
             'contact' => [
                 'name' => 'نام',
+                'name-search-placeholder' => 'جستجو بر اساس نام، ایمیل و شماره',
                 'email' => 'ایمیل',
                 'contact-number' => 'شماره تماس',
                 'organization' => 'سازمان',

@@ -1870,6 +1870,7 @@ return [
         'common' => [
             'contact' => [
                 'name' => 'Nombre',
+                'name-search-placeholder' => 'Buscar por nombre, correo electrónico y número',
                 'email' => 'Correo Electrónico',
                 'contact-number' => 'Número de Contacto',
                 'organization' => 'Organización',
