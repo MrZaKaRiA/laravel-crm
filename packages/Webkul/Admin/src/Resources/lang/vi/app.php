@@ -1154,7 +1154,7 @@ return [
                     'status' => 'Trạng thái',
                     'title' => 'Tạo Người Dùng',
                     'view-permission' => 'Xem Quyền Hạn',
-                    'select-at-lest-one-group' => 'Select at least one group',
+                    'select-at-lest-one-group' => 'Chọn ít nhất một nhóm',
                 ],
                 'edit' => [
                     'title' => 'Chỉnh Sửa Người Dùng',
@@ -1475,7 +1475,7 @@ return [
                 'name' => 'Tên',
                 'quick_add' => 'Thêm Nhanh',
                 'numeric' => 'Số',
-                'option-deleted' => 'Tùy Chọn Thuộc Tính đã được xóa thành công',
+                'option-deleted' => 'Tùy chọn thuộc tính đã được xóa thành công',
                 'option-name' => 'Tên Tùy Chọn',
                 'option-type' => 'Loại Tùy Chọn',
                 'options' => 'Tùy Chọn',
@@ -1987,9 +1987,9 @@ return [
                     'title' => 'Cài đặt',
                     'info' => 'Cập nhật cài đặt của bạn tại đây.',
                     'footer' => [
-                        'info' => 'Chúng tôi có thể cấu hình phần "Powered by" tại đây.',
-                        'powered-by' => 'Trình chỉnh sửa văn bản Powered by',
-                        'title' => 'Cấu hình phần Powered by',
+                        'info' => 'Chúng ta có thể cấu hình phần "Powered by" ở đây.',
+                        'powered-by' => 'Trình soạn thảo văn bản "Powered by"',
+                        'title' => 'Cấu hình phần "Powered by"',
                     ],
                     'menu' => [
                         'activities' => 'Hoạt động',
@@ -1998,7 +1998,7 @@ return [
                         'dashboard' => 'Bảng điều khiển',
                         'draft' => 'Bản nháp',
                         'inbox' => 'Hộp thư đến',
-                        'info' => 'Chúng tôi có thể cấu hình tên các mục menu tại đây.',
+                        'info' => 'Chúng ta có thể cấu hình tên các mục menu ở đây.',
                         'leads' => 'Khách hàng tiềm năng',
                         'mail' => 'Thư',
                         'organizations' => 'Tổ chức',
@@ -2013,8 +2013,8 @@ return [
                     ],
                     'menu-color' => [
                         'brand-color' => 'Màu thương hiệu',
-                        'info' => 'Chúng tôi có thể thay đổi màu sắc của các mục menu tại đây.',
-                        'title' => 'Cấu hình màu sắc mục menu',
+                        'info' => 'Chúng ta có thể thay đổi màu của các mục menu ở đây.',
+                        'title' => 'Cấu hình màu mục menu',
                     ],
                 ],
             ],
@@ -2065,8 +2065,8 @@ return [
     'dashboard' => [
         'index' => [
             'title' => 'Bảng Điều Khiển',
-            'start-date' => 'Start Date',
-            'end-date' => 'End Date',
+            'start-date' => 'Ngày bắt đầu',
+            'end-date' => 'Ngày kết thúc',
             'revenue' => [
                 'lost-revenue' => 'Doanh Thu Bị Mất',
                 'won-revenue' => 'Doanh Thu Đã Đạt',
