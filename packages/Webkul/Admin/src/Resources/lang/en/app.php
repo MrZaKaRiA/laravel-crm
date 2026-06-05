@@ -2,6 +2,7 @@
 
 return [
     'acl' => [
+        'help' => 'Help',
         'leads' => 'Leads',
         'lead' => 'Lead',
         'quotes' => 'Quotes',
@@ -2114,9 +2115,75 @@ return [
             ],
         ],
     ],
+    'help' => [
+        'index' => [
+            'title' => 'Help & Resources',
+            'description' => 'Everything you need to get the most out of Krayin Admin — hosting, support and professional services, plus extensions and developer documentation.',
+            'contact-us' => 'Contact us',
+            'view-all' => 'View all',
+            'recent-tickets' => 'Recent Support Tickets',
+            'still-need-help-title' => 'Still need a hand?',
+            'still-need-help-description' => 'Talk to the Krayin team about hosting, custom development or anything else.',
+
+            'services' => [
+                'title' => 'Services',
+                'cloud-hosting' => [
+                    'title' => 'Cloud Hosting',
+                    'description' => 'Cost-effective, managed cloud hosting — try and launch Krayin on the cloud in minutes, fully optimised and scalable.',
+                ],
+                'support' => [
+                    'title' => 'Support & Maintenance',
+                    'description' => 'Dedicated technical support and ongoing maintenance plans to keep your CRM secure, updated and running smoothly.',
+                ],
+                'paid-services' => [
+                    'title' => 'Paid Services',
+                    'description' => 'Expert help for module integration, customisation, data migration, version upgrades and bespoke development.',
+                ],
+            ],
+
+            'resources' => [
+                'title' => 'Resources & Documentation',
+                'extensions' => [
+                    'title' => 'Extensions',
+                    'description' => 'Browse official and community add-ons to extend Krayin with new connectors, channels and features.',
+                ],
+                'dev-docs' => [
+                    'title' => 'Dev Docs & Blogs',
+                    'description' => 'Developer guides, tutorials and the latest articles to help you build, configure and stay up to date.',
+                ],
+                'api-docs' => [
+                    'title' => 'API Docs',
+                    'description' => 'Full REST API reference with endpoints, authentication and examples to integrate Krayin with your stack.',
+                ],
+            ],
+
+            'community' => [
+                'forums' => [
+                    'title' => 'Community Forums',
+                    'description' => 'Connect with thousands of other Krayin users and developers to share tips and solve problems.',
+                    'link' => 'Join the community',
+                ],
+                'tutorials' => [
+                    'title' => 'Video Tutorials',
+                    'description' => 'Watch step-by-step video guides on setting up your CRM, configuring pipelines and managing users.',
+                    'link' => 'Browse YouTube channel',
+                ],
+            ],
+
+            'tickets' => [
+                'id' => 'ID',
+                'subject' => 'Subject',
+                'category' => 'Category',
+                'created-at' => 'Created At',
+                'status' => 'Status',
+                'actions' => 'Actions',
+            ],
+        ],
+    ],
     'layouts' => [
         'app-version' => 'Version: :version',
         'dashboard' => 'Dashboard',
+        'help' => 'Help',
         'leads' => 'Leads',
         'quotes' => 'Quotes',
         'quote' => 'Quote',
