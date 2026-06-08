@@ -2121,7 +2121,6 @@ return [
             'description' => 'Everything you need to get the most out of Krayin Admin — hosting, support and professional services, plus extensions and developer documentation.',
             'contact-us' => 'Contact us',
             'view-all' => 'View all',
-            'recent-tickets' => 'Recent Support Tickets',
             'still-need-help-title' => 'Still need a hand?',
             'still-need-help-description' => 'Talk to the Krayin team about hosting, custom development or anything else.',
 

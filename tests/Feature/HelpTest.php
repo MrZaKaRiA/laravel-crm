@@ -10,7 +10,6 @@ it('shows the help page to an authenticated admin', function () {
         ->assertSee('Cloud Hosting')
         ->assertSee('Extensions')
         ->assertSee('krayincrm.com/cloud-hosting')
-        ->assertSee('Recent Support Tickets')
         ->assertSee('Still need a hand?')
         ->assertSee('Community Forums')
         ->assertSee('Video Tutorials');
