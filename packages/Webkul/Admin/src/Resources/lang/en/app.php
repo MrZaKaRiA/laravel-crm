@@ -2126,7 +2126,7 @@ return [
             'still-need-help-description' => 'Talk to the Krayin team about hosting, custom development or anything else.',
 
             'services' => [
-                'title' => 'Services',
+                'title' => 'Services & Resources',
                 'cloud-hosting' => [
                     'title' => 'Cloud Hosting',
                     'description' => 'Cost-effective, managed cloud hosting — try and launch Krayin on the cloud in minutes, fully optimised and scalable.',
@@ -2135,17 +2135,17 @@ return [
                     'title' => 'Support & Maintenance',
                     'description' => 'Dedicated technical support and ongoing maintenance plans to keep your CRM secure, updated and running smoothly.',
                 ],
-                'paid-services' => [
-                    'title' => 'Paid Services',
-                    'description' => 'Expert help for module integration, customisation, data migration, version upgrades and bespoke development.',
+                'extensions' => [
+                    'title' => 'Extensions',
+                    'description' => 'Browse official and community add-ons to extend Krayin with new connectors, channels and features.',
                 ],
             ],
 
             'resources' => [
-                'title' => 'Resources & Documentation',
-                'extensions' => [
-                    'title' => 'Extensions',
-                    'description' => 'Browse official and community add-ons to extend Krayin with new connectors, channels and features.',
+                'title' => 'Documentation',
+                'user-docs' => [
+                    'title' => 'User Guide',
+                    'description' => 'Expert help for module integration, customisation, data migration, version upgrades and bespoke development.',
                 ],
                 'dev-docs' => [
                     'title' => 'Dev Docs & Blogs',
@@ -2169,21 +2169,12 @@ return [
                     'link' => 'Browse YouTube channel',
                 ],
             ],
-
-            'tickets' => [
-                'id' => 'ID',
-                'subject' => 'Subject',
-                'category' => 'Category',
-                'created-at' => 'Created At',
-                'status' => 'Status',
-                'actions' => 'Actions',
-            ],
         ],
     ],
     'layouts' => [
         'app-version' => 'Version: :version',
         'dashboard' => 'Dashboard',
-        'help' => 'Help',
+        'help' => 'Help & Resources',
         'leads' => 'Leads',
         'quotes' => 'Quotes',
         'quote' => 'Quote',

@@ -2,6 +2,7 @@
 
 return [
     'acl' => [
+        'help' => 'Trợ giúp',
         'leads' => 'Những Khách hàng tiềm năng',
         'lead' => 'Khách hàng tiềm năng',
         'quotes' => 'Báo giá',
@@ -2113,9 +2114,66 @@ return [
             ],
         ],
     ],
+    'help' => [
+        'index' => [
+            'title' => 'Trợ giúp & Tài nguyên',
+            'description' => 'Mọi thứ bạn cần để tận dụng tối đa Krayin Admin — lưu trữ, hỗ trợ và dịch vụ chuyên nghiệp, cùng với tiện ích mở rộng và tài liệu dành cho nhà phát triển.',
+            'contact-us' => 'Liên hệ với chúng tôi',
+            'view-all' => 'Xem tất cả',
+            'recent-tickets' => 'Yêu cầu hỗ trợ gần đây',
+            'still-need-help-title' => 'Vẫn cần trợ giúp?',
+            'still-need-help-description' => 'Trao đổi với đội ngũ Krayin về lưu trữ, phát triển tùy chỉnh hoặc bất kỳ vấn đề nào khác.',
+
+            'services' => [
+                'title' => 'Dịch vụ & Tài nguyên',
+                'cloud-hosting' => [
+                    'title' => 'Lưu trữ đám mây',
+                    'description' => 'Dịch vụ lưu trữ đám mây được quản lý, tiết kiệm chi phí — dùng thử và khởi chạy Krayin trên đám mây trong vài phút, được tối ưu hóa toàn diện và có khả năng mở rộng.',
+                ],
+                'support' => [
+                    'title' => 'Hỗ trợ & Bảo trì',
+                    'description' => 'Hỗ trợ kỹ thuật chuyên dụng và các gói bảo trì liên tục để giữ cho CRM của bạn an toàn, được cập nhật và hoạt động trơn tru.',
+                ],
+                'extensions' => [
+                    'title' => 'Tiện ích mở rộng',
+                    'description' => 'Duyệt các tiện ích bổ sung chính thức và từ cộng đồng để mở rộng Krayin với các trình kết nối, kênh và tính năng mới.',
+                ],
+            ],
+
+            'resources' => [
+                'title' => 'Tài liệu',
+                'user-docs' => [
+                    'title' => 'Hướng dẫn sử dụng',
+                    'description' => 'Hỗ trợ chuyên môn cho việc tích hợp mô-đun, tùy chỉnh, di chuyển dữ liệu, nâng cấp phiên bản và phát triển theo yêu cầu.',
+                ],
+                'dev-docs' => [
+                    'title' => 'Tài liệu nhà phát triển & Blog',
+                    'description' => 'Hướng dẫn dành cho nhà phát triển, các bài hướng dẫn và những bài viết mới nhất giúp bạn xây dựng, cấu hình và luôn cập nhật.',
+                ],
+                'api-docs' => [
+                    'title' => 'Tài liệu API',
+                    'description' => 'Tài liệu tham khảo API REST đầy đủ với các điểm cuối, xác thực và ví dụ để tích hợp Krayin vào hệ thống của bạn.',
+                ],
+            ],
+
+            'community' => [
+                'forums' => [
+                    'title' => 'Diễn đàn cộng đồng',
+                    'description' => 'Kết nối với hàng nghìn người dùng và nhà phát triển Krayin khác để chia sẻ mẹo và giải quyết vấn đề.',
+                    'link' => 'Tham gia cộng đồng',
+                ],
+                'tutorials' => [
+                    'title' => 'Video hướng dẫn',
+                    'description' => 'Xem các hướng dẫn bằng video từng bước về cách thiết lập CRM, cấu hình quy trình và quản lý người dùng.',
+                    'link' => 'Xem kênh YouTube',
+                ],
+            ],
+        ],
+    ],
     'layouts' => [
         'app-version' => 'Phiên Bản : :version',
         'dashboard' => 'Bảng Điều Khiển',
+        'help' => 'Trợ giúp & Tài nguyên',
         'leads' => 'Leads',
         'quotes' => 'Báo Giá',
         'quote' => 'Báo Giá',

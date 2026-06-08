@@ -18,7 +18,7 @@
 
     {!! view_render_event('admin.help.index.before') !!}
 
-    <div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-8 min-h-[calc(100vh-62px)] max-w-full bg-gray-100 pt-3 transition-all duration-300 dark:bg-gray-950">
         <!-- Hero -->
         {!! view_render_event('admin.help.index.hero.before') !!}
 
@@ -77,57 +77,6 @@
         </div>
 
         {!! view_render_event('admin.help.index.resources.after') !!}
-
-        <!-- Recent Support Tickets (static placeholder) -->
-        <div class="overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900">
-            <div class="flex items-center justify-between border-b border-gray-200 p-5 dark:border-gray-800">
-                <p class="text-lg font-semibold text-gray-800 dark:text-white">
-                    @lang('admin::app.help.index.recent-tickets')
-                </p>
-
-                <a href="{{ $support['contact_url'] }}" target="_blank" class="text-sm font-semibold text-brandColor hover:underline">
-                    @lang('admin::app.help.index.view-all')
-                </a>
-            </div>
-
-            <div class="overflow-x-auto">
-                <table class="w-full text-left">
-                    <thead class="bg-gray-50 text-sm font-semibold text-gray-600 dark:bg-gray-950 dark:text-gray-300">
-                        <tr>
-                            <th class="px-6 py-4">@lang('admin::app.help.index.tickets.id')</th>
-                            <th class="px-6 py-4">@lang('admin::app.help.index.tickets.subject')</th>
-                            <th class="px-6 py-4">@lang('admin::app.help.index.tickets.category')</th>
-                            <th class="px-6 py-4">@lang('admin::app.help.index.tickets.created-at')</th>
-                            <th class="px-6 py-4">@lang('admin::app.help.index.tickets.status')</th>
-                        </tr>
-                    </thead>
-
-                    <tbody class="divide-y divide-gray-200 text-sm text-gray-600 dark:divide-gray-800 dark:text-gray-300">
-                        <tr>
-                            <td class="px-6 py-4 font-semibold">#TK-8492</td>
-                            <td class="px-6 py-4">SSL certificate renewal issue on production</td>
-                            <td class="px-6 py-4">Hosting</td>
-                            <td class="px-6 py-4">22 Mar 2025, 02:30 PM</td>
-                            <td class="px-6 py-4"><span class="rounded-full bg-violet-50 px-2 py-1 text-xs font-semibold uppercase text-brandColor">In Progress</span></td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-4 font-semibold">#TK-8488</td>
-                            <td class="px-6 py-4">Custom API endpoint returning 403 Forbidden</td>
-                            <td class="px-6 py-4">Development</td>
-                            <td class="px-6 py-4">21 Mar 2025, 11:15 AM</td>
-                            <td class="px-6 py-4"><span class="rounded-full bg-gray-100 px-2 py-1 text-xs font-semibold uppercase text-gray-600 dark:bg-gray-800 dark:text-gray-300">Pending</span></td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-4 font-semibold">#TK-8475</td>
-                            <td class="px-6 py-4">Bulk data import failure from CSV</td>
-                            <td class="px-6 py-4">Data Management</td>
-                            <td class="px-6 py-4">20 Mar 2025, 09:45 AM</td>
-                            <td class="px-6 py-4"><span class="rounded-full bg-green-100 px-2 py-1 text-xs font-semibold uppercase text-green-700 dark:bg-green-900 dark:text-green-300">Resolved</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
 
         <!-- Still need a hand CTA -->
         <div class="flex flex-col items-center justify-between gap-6 rounded-2xl bg-brandColor p-8 md:flex-row">

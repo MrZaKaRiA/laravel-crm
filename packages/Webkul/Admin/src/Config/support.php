@@ -6,7 +6,7 @@ return [
             'icon' => 'cloud',
             'title' => 'admin::app.help.index.services.cloud-hosting.title',
             'description' => 'admin::app.help.index.services.cloud-hosting.description',
-            'url' => 'https://krayincrm.com/cloud-hosting',
+            'url' => 'https://krayincrm.com/crm-cloud-hosting',
             'url_label' => 'krayincrm.com/cloud-hosting',
         ],
         [
@@ -17,27 +17,27 @@ return [
             'url_label' => 'krayincrm.com/support',
         ],
         [
-            'icon' => 'services',
-            'title' => 'admin::app.help.index.services.paid-services.title',
-            'description' => 'admin::app.help.index.services.paid-services.description',
-            'url' => 'https://krayincrm.com/support-maintenance-services/',
-            'url_label' => 'krayincrm.com/services',
+            'icon' => 'extensions',
+            'title' => 'admin::app.help.index.services.extensions.title',
+            'description' => 'admin::app.help.index.services.extensions.description',
+            'url' => 'https://krayincrm.com/extensions/',
+            'url_label' => 'krayincrm.com/extensions',
         ],
     ],
 
     'resources' => [
         [
-            'icon' => 'extensions',
-            'title' => 'admin::app.help.index.resources.extensions.title',
-            'description' => 'admin::app.help.index.resources.extensions.description',
-            'url' => 'https://krayincrm.com/extensions/',
-            'url_label' => 'krayincrm.com/extensions',
+            'icon' => 'docs',
+            'title' => 'admin::app.help.index.resources.user-docs.title',
+            'description' => 'admin::app.help.index.resources.user-docs.description',
+            'url' => 'https://docs.krayincrm.com/',
+            'url_label' => 'docs.krayincrm.com',
         ],
         [
             'icon' => 'docs',
             'title' => 'admin::app.help.index.resources.dev-docs.title',
             'description' => 'admin::app.help.index.resources.dev-docs.description',
-            'url' => 'https://devdocs.krayincrm.com',
+            'url' => 'https://devdocs.krayincrm.com/',
             'url_label' => 'devdocs.krayincrm.com',
         ],
         [
