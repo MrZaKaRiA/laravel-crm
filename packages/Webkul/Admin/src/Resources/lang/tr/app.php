@@ -2120,7 +2120,6 @@ return [
             'description' => 'Krayin Admin panelinden en iyi şekilde yararlanmanız için gereken her şey — barındırma, destek ve profesyonel hizmetlerin yanı sıra eklentiler ve geliştirici dokümantasyonu.',
             'contact-us' => 'Bize ulaşın',
             'view-all' => 'Tümünü gör',
-            'recent-tickets' => 'Son Destek Talepleri',
             'still-need-help-title' => 'Hâlâ yardıma mı ihtiyacınız var?',
             'still-need-help-description' => 'Barındırma, özel geliştirme veya başka her konuda Krayin ekibiyle görüşün.',
 

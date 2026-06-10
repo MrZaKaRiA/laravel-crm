@@ -2120,7 +2120,6 @@ return [
             'description' => 'Tudo o que você precisa para aproveitar ao máximo o Krayin Admin — hospedagem, suporte e serviços profissionais, além de extensões e documentação para desenvolvedores.',
             'contact-us' => 'Fale conosco',
             'view-all' => 'Ver tudo',
-            'recent-tickets' => 'Tickets de suporte recentes',
             'still-need-help-title' => 'Ainda precisa de ajuda?',
             'still-need-help-description' => 'Fale com a equipe Krayin sobre hospedagem, desenvolvimento personalizado ou qualquer outra coisa.',
 
