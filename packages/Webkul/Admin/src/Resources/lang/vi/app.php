@@ -2120,7 +2120,6 @@ return [
             'description' => 'Mọi thứ bạn cần để tận dụng tối đa Krayin Admin — lưu trữ, hỗ trợ và dịch vụ chuyên nghiệp, cùng với tiện ích mở rộng và tài liệu dành cho nhà phát triển.',
             'contact-us' => 'Liên hệ với chúng tôi',
             'view-all' => 'Xem tất cả',
-            'recent-tickets' => 'Yêu cầu hỗ trợ gần đây',
             'still-need-help-title' => 'Vẫn cần trợ giúp?',
             'still-need-help-description' => 'Trao đổi với đội ngũ Krayin về lưu trữ, phát triển tùy chỉnh hoặc bất kỳ vấn đề nào khác.',
 
